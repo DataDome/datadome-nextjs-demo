@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const Layout = getLayout<LayoutProps>(Component);
 
   const jsTagOptions = `
+    window.ddjskey = '${process.env.NEXT_PUBLIC_DATADOME_CLIENT_SIDE_KEY}';
     window.ddoptions = {
       endpoint: '${DATADOME_JS}',
     };
@@ -23,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Script src={DATADOME_TAGS} strategy="beforeInteractive" />
 
       <Layout
-        path="edge-middleware/bot-protection-datadome"
+        path="/"
         deployButton={{
           env: [
             "NEXT_PUBLIC_DATADOME_CLIENT_SIDE_KEY",
