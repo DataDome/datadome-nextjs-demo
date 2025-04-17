@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      {/* Scripts globaux pour DataDome */}
+      {/* DataDome bot protection */}
       <Script id="jstag-options" strategy="beforeInteractive">
         {jsTagOptions}
       </Script>
