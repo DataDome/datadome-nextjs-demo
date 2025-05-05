@@ -1,5 +1,5 @@
 import { type NextRequest,  NextResponse } from 'next/server';
-import { DataDomeMiddleware, DEFAULT_ENDPOINT_HOST, DEFAULT_TIMEOUT } from '@datadome/module-nextjs';
+import { DataDomeMiddleware } from '@datadome/module-nextjs';
 
 export const config = {
     /**
