@@ -9,7 +9,7 @@ export const config = {
      * - favicon.ico, sitemap.xml, robots.txt (metadata files)
      * 
      * It avoids to send those requests to the DataDome's Middleware.
-     * @see {@link https://nextjs.org/docs/pages/building-your-application/optimizing/static-assets}
+     * @see {@link https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher}
      */
     matcher: ['/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)'],
 };

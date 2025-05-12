@@ -45,7 +45,7 @@ You'll need to have an account with [DataDome](https://datadome.co/free-signup/)
 cp .env.example .env.local
 ```
 
-Then open `.env.local` and set the environment variables to match the ones in your DataDome dashboard. Your keys should be available at https://app.datadome.co/dashboard/management/integrations
+Then open `.env.local` and set the environment variables to match the ones in your DataDome dashboard. Your keys are available at https://app.datadome.co/dashboard/management/integrations
 
 Next, run Next.js in development mode:
 
