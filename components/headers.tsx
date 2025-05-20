@@ -14,10 +14,11 @@ export default function Headers({ path }: { path: string }) {
         fetch(path, { method: 'HEAD' })
             .then((res) => {
                 if (res.ok) {
-                    setLatency(Math.round(Date.now() - start));
+                    const latency = Math.round(Date.now() - start)
+                    setLatency(latency);
                     setHeaders({
                         'x-datadome': res.headers.get('x-datadome')!,
-                        'x-datadome-latency': res.headers.get('x-datadome-latency')!,
+                        'x-datadome-latency': latency.toString(),
                     });
                 }
             })

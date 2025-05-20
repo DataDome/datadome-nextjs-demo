@@ -23,6 +23,8 @@ https://edge-functions-bot-protection-datadome.vercel.app
 
 ## How to Use
 
+You need to have an account with [DataDome](https://datadome.co/free-signup/).
+
 You can choose from one of the following two methods to use this repository:
 
 ### One-Click Deploy
@@ -39,7 +41,7 @@ Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packag
 pnpm create next-app --example https://github.com/DataDome/datadome-nextjs-demo
 ```
 
-You'll need to have an account with [DataDome](https://datadome.co/free-signup/). Once that's done, copy the `.env.example` file in this directory to `.env.local` (which will be ignored by Git):
+Once that's done, copy the `.env.example` file in this directory to `.env.local` (which will be ignored by Git):
 
 ```bash
 cp .env.example .env.local
