@@ -4,6 +4,7 @@
     "version": "1.0.0",
     "license": "MIT",
     "private": true,
+    "packageManager": "pnpm@10.7.1",
     "scripts": {
         "dev": "next",
         "build": "next build",
