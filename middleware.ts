@@ -1,4 +1,4 @@
-import { type NextRequest,  NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 import { DataDomeMiddleware } from '@datadome/module-nextjs';
 
 export const config = {
@@ -7,14 +7,20 @@ export const config = {
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico, sitemap.xml, robots.txt (metadata files)
-     * 
+     *
      * It avoids to send those requests to the DataDome's Middleware.
      * @see {@link https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher}
      */
     matcher: ['/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)'],
 };
 
-const ddMiddleware = new DataDomeMiddleware(process.env.DATADOME_SERVER_SIDE_KEY ?? '');
+const ddMiddleware = new DataDomeMiddleware(process.env.DATADOME_SERVER_SIDE_KEY ?? '', {
+    endpointHost: process.env.DATADOME_ENDPOINT ?? 'api.datadome.co',
+    timeout: parseInt(process.env.DATADOME_TIMEOUT ?? '150', 10),
+    enableGraphQLSupport: process.env.DATADOME_ENABLE_GRAPHQL_SUPPORT
+        ? Boolean(process.env.DATADOME_ENABLE_GRAPHQL_SUPPORT)
+        : false,
+});
 
 async function datadomeMiddleware(req: NextRequest, res?: NextResponse) {
     const { pathname } = req.nextUrl;
