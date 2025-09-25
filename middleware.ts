@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from 'next/server';
-import { DataDomeMiddleware } from '@datadome/module-nextjs';
+import { DataDomeMiddleware, DEFAULT_SERVER_SIDE_URL, DEFAULT_TIMEOUT } from '@datadome/module-nextjs';
 
 export const config = {
     /**
@@ -15,8 +15,8 @@ export const config = {
 };
 
 const ddMiddleware = new DataDomeMiddleware(process.env.DATADOME_SERVER_SIDE_KEY ?? '', {
-    endpointHost: process.env.DATADOME_ENDPOINT ?? 'api.datadome.co',
-    timeout: parseInt(process.env.DATADOME_TIMEOUT ?? '150', 10),
+    endpointHost: process.env.DATADOME_ENDPOINT ?? DEFAULT_SERVER_SIDE_URL,
+    timeout: process.env.DATADOME_TIMEOUT ? parseInt(process.env.DATADOME_TIMEOUT, 10) : DEFAULT_TIMEOUT,
     enableGraphQLSupport: process.env.DATADOME_ENABLE_GRAPHQL_SUPPORT
         ? Boolean(process.env.DATADOME_ENABLE_GRAPHQL_SUPPORT)
         : false,
