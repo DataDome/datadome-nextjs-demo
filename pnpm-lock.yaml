@@ -15,8 +15,8 @@ importers:
   .:
     dependencies:
       '@datadome/module-nextjs':
-        specifier: ^1.1.3
-        version: 1.1.3(next@16.0.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+        specifier: ^1.1.5
+        version: 1.1.5(next@16.0.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       '@vercel/examples-ui':
         specifier: ^2.0.0
         version: 2.0.3(next@16.0.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -64,11 +64,11 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@datadome/module-nextjs@1.1.3':
-    resolution: {integrity: sha512-8Wjol4vBH9LFz0UhHKVRk+OJYiPuFN6QRweIi4Ix5eAyP7ad2sS2JCy1QEBLiwSf7sDw9JiN8TDLYJENxgpXwA==}
+  '@datadome/module-nextjs@1.1.5':
+    resolution: {integrity: sha512-5Fpj6TUHyia9WOPPhEvCap9mPzjHZkOkuxhyxYF8XJoQJEBjoOZ0Zr7gfvxcDKCE0l0K2Ohv8kO+q2pcWJcnPw==}
     engines: {node: '>= 18'}
     peerDependencies:
-      next: '>= 13 < 16'
+      next: '>= 13 < 17'
       react: '>= 18'
 
   '@emnapi/core@1.4.3':
@@ -1864,7 +1864,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@datadome/module-nextjs@1.1.3(next@16.0.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)':
+  '@datadome/module-nextjs@1.1.5(next@16.0.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)':
     dependencies:
       next: 16.0.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react: 19.1.0
