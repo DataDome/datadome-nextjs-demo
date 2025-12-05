@@ -11,9 +11,9 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@datadome/module-nextjs": "^1.0.0",
+        "@datadome/module-nextjs": "^1.1.5",
         "@vercel/examples-ui": "^2.0.0",
-        "next": "canary",
+        "next": "^16.0.7",
         "react": "latest",
         "react-dom": "latest"
     },

@@ -14,7 +14,7 @@ export const config = {
     matcher: ['/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)'],
 };
 
-const ddMiddleware = new DataDomeMiddleware(process.env.DATADOME_SERVER_SIDE_KEY ?? '', {
+const ddProxy = new DataDomeMiddleware(process.env.DATADOME_SERVER_SIDE_KEY ?? '', {
     endpointHost: process.env.DATADOME_ENDPOINT ?? DEFAULT_SERVER_SIDE_URL,
     timeout: process.env.DATADOME_TIMEOUT ? parseInt(process.env.DATADOME_TIMEOUT, 10) : DEFAULT_TIMEOUT,
     enableGraphQLSupport: process.env.DATADOME_ENABLE_GRAPHQL_SUPPORT
@@ -22,7 +22,7 @@ const ddMiddleware = new DataDomeMiddleware(process.env.DATADOME_SERVER_SIDE_KEY
         : false,
 });
 
-async function datadomeMiddleware(req: NextRequest, res?: NextResponse) {
+async function datadomeProxy(req: NextRequest, res?: NextResponse) {
     const { pathname } = req.nextUrl;
 
     if (pathname === '/omit') {
@@ -44,9 +44,9 @@ async function datadomeMiddleware(req: NextRequest, res?: NextResponse) {
     //
     // If there's no rewrite, you're not a bot and we
     // send the response that includes Datadome's headers.
-    return ddMiddleware.handleRequest(req, res);
+    return ddProxy.handleRequest(req, res);
 }
 
-export default async function middleware(req: NextRequest) {
-    return datadomeMiddleware(req);
+export default async function proxy(req: NextRequest) {
+    return datadomeProxy(req);
 }
