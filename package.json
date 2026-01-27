@@ -13,7 +13,7 @@
     "dependencies": {
         "@datadome/module-nextjs": "^1.1.5",
         "@vercel/examples-ui": "^2.0.0",
-        "next": "^16.0.10",
+        "next": "^16.1.5",
         "react": "latest",
         "react-dom": "latest"
     },
