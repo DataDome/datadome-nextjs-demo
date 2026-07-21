@@ -20,6 +20,7 @@ const ddProxy = new DataDomeMiddleware(process.env.DATADOME_SERVER_SIDE_KEY ?? '
     enableGraphQLSupport: process.env.DATADOME_ENABLE_GRAPHQL_SUPPORT
         ? Boolean(process.env.DATADOME_ENABLE_GRAPHQL_SUPPORT)
         : false,
+    graphQLEndpoint: process.env.DATADOME_GRAPHQL_ENDPOINT ?? '/graphql',
 });
 
 async function datadomeProxy(req: NextRequest, res?: NextResponse) {
