@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import { DataDomeComponent } from "@datadome/module-nextjs";
 import { getLayout } from "@vercel/examples-ui";
-import type { LayoutProps } from "@vercel/examples-ui/dist/layout";
+import type { LayoutProps } from "@vercel/examples-ui";
 import "@vercel/examples-ui/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {

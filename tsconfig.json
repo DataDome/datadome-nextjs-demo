@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "es5",
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -14,18 +13,17 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "downlevelIteration": true,
     "jsx": "react-jsx",
     "paths": {
       "@components": [
-        "components/index"
+        "./components/index"
       ],
       "@components/*": [
-        "components/*"
+        "./components/*"
       ]
     }
   },
